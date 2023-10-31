@@ -6,7 +6,7 @@ services:
     environment:
       - FILE__MYVAR="./.env"
     volumes:
-      - ./php:/config/www/
+      - ./php/index.php:/config/www/index.php
     depends_on:
       - db
     links:
