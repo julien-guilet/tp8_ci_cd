@@ -1,8 +1,6 @@
 services:
   app:
     image: lscr.io/linuxserver/nginx:latest
-    env_file:
-      - .env
     volumes:
       - ./php/index.php:/config/www/index.php
     depends_on:

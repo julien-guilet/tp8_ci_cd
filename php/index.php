@@ -12,8 +12,7 @@
     echo '<tr><td>ID</td><td>NOM</td></tr>';
     $pdo = null;
     try {
-        echo 'Mon nom d\'utilisateur est ' .getenv('MYSQL_USER') . ' !';
-        $pdo = new PDO("mysql:host=db;dbname=".$_ENV['BDD_DATABASE']."", $_ENV['BDD_USER'], $_ENV['BDD_PASSWORD']);
+        $pdo = new PDO("mysql:host=db;dbname=database", "root", "root");
     } catch (Exception $e) {
         echo $e;
     }
