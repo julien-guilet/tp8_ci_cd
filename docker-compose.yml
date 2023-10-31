@@ -1,0 +1,18 @@
+version: '2.3'
+services:
+  worker:
+    image: myoung34/github-runner:debian-sid
+    environment:
+      REPO_URL: https://github.com/julien-guilet/tp8_ci_cd
+      RUNNER_NAME: linux-docker
+      RUNNER_TOKEN: AQLLWVAKYSIHHIY62YKCCIDFIDSBK
+      RUNNER_WORKDIR: /tmp/runner/work
+      RUNNER_GROUP: 
+      RUNNER_SCOPE: 'repo'
+      LABELS: linux,x64,gpu
+    security_opt:
+      # needed on SELinux systems to allow docker container to manage other docker containers
+      - label:disable
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - '/tmp/runner:/tmp/runner'
