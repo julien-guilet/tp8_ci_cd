@@ -1,0 +1,19 @@
+name: GitHub Actions Build and Deploy a php app
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Deploy
+      run: docker compose up --build
+    - name: Show
+      run: echo "hello"
+    - name: Stop
+      run: docker compose stop
