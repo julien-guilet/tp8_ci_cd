@@ -3,8 +3,6 @@ services:
     image: lscr.io/linuxserver/nginx:latest
     env_file:
       - .env
-    environment:
-      - FILE__MYVAR="./.env"
     volumes:
       - ./php/index.php:/config/www/index.php
     depends_on:
