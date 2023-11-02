@@ -10,10 +10,7 @@ jobs:
         persist-credentials: false
     - name: Deploy
       run: docker compose up --build --detach
-    - name: Screenshot Website
-      uses: swinton/screenshot-website@v1.x
-      with:
-        source: http://localhost:8080/index.php
-        destination: screenshot.png
+    - name: Get
+      run: wget http://localhost:8080/index.php
     - name: Stop
       run: docker compose stop
