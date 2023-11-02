@@ -2,7 +2,7 @@ name: Build and Deploy a php app
 on: workflow_dispatch
 jobs:
   build-and-deploy:
-    runs-on: linux-docker
+    runs-on: linux
     steps:
     - name: Checkout
       uses: actions/checkout@v2
