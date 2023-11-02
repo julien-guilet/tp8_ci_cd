@@ -11,7 +11,7 @@ jobs:
     - name: Deploy
       run: docker compose up --build --detach
     - name: Get
-      uses: wei/wget@v1
+      uses: docker compose exec app curl http://localhost
       with:
         args: http://localhost:8080/index.php
     - name: Stop
