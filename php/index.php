@@ -12,7 +12,7 @@
     echo '<tr><td>ID</td><td>NOM</td></tr>';
     $pdo = null;
     try {
-        $pdo = new PDO("mysql:host=db;dbname=database", "root", "root");
+        $pdo = new PDO("mysql:host=db;port=3306;dbname=database", "root", "root");
     } catch (Exception $e) {
         echo $e;
     }
