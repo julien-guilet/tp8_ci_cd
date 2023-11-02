@@ -1,4 +1,4 @@
-name: GitHub Actions Build and Deploy a php app
+name: Build and Deploy a php app
 on:
   push:
     branches:
@@ -13,7 +13,10 @@ jobs:
         persist-credentials: false
     - name: Deploy
       run: docker compose up --build
-    - name: Show
-      run: echo "hello"
+    - name: Screenshot Website
+      uses: swinton/screenshot-website@v1.x
+      with:
+        source: http://localhost:8080/index.php
+        destination: screenshot.png
     - name: Stop
       run: docker compose stop
