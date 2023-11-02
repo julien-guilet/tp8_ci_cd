@@ -5,7 +5,7 @@ services:
     environment:
       REPO_URL: https://github.com/julien-guilet/tp8_ci_cd
       RUNNER_NAME: linux-docker
-      RUNNER_TOKEN: AQLLWVAKYSIHHIY62YKCCIDFIDSBK
+      RUNNER_TOKEN: AQLLWVCFSVTCDVJX3W3AEB3FIN2B2
       RUNNER_WORKDIR: /tmp/runner/work
       RUNNER_GROUP: 
       RUNNER_SCOPE: 'repo'
