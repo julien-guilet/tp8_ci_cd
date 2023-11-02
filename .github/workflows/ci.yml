@@ -9,7 +9,7 @@ jobs:
       with:
         persist-credentials: false
     - name: Deploy
-      run: docker compose up --build
+      run: docker compose up --build --detach
     - name: Screenshot Website
       uses: swinton/screenshot-website@v1.x
       with:
