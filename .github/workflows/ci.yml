@@ -9,8 +9,8 @@ jobs:
       with:
         persist-credentials: false
     - name: Deploy
-      run: docker compose up --build --detach
-    - name: Get
-      run: docker compose exec app curl http://localhost
+      run: |
+        docker compose up --build --detach
+        docker compose exec app curl http://localhost
     - name: Stop
       run: docker compose stop
