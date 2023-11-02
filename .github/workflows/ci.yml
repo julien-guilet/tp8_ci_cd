@@ -11,6 +11,8 @@ jobs:
     - name: Deploy
       run: docker compose up --build --detach
     - name: Get
-      run: wget http://localhost:8080/index.php
+      uses: wei/wget@v1
+      with:
+        args: http://localhost:8080/index.php
     - name: Stop
       run: docker compose stop
