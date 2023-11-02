@@ -11,8 +11,6 @@ jobs:
     - name: Deploy
       run: docker compose up --build --detach
     - name: Get
-      uses: docker compose exec app curl http://localhost
-      with:
-        args: http://localhost:8080/index.php
+      run: docker compose exec app curl http://localhost
     - name: Stop
       run: docker compose stop
